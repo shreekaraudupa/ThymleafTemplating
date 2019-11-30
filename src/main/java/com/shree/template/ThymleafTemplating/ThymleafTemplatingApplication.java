@@ -1,23 +1,23 @@
 package com.shree.template.ThymleafTemplating;
 
+import com.shree.template.ThymleafTemplating.service.TemplatingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 @SpringBootApplication
 public class ThymleafTemplatingApplication {
 
+
+
     public static void main(String[] args) {
 
         SpringApplication.run(ThymleafTemplatingApplication.class, args);
-        render();
-    }
+        TemplatingService templatingService = new TemplatingService();
+        templatingService.trigger();
+   }
 
-    private static void render() {
-        System.out.println("Hello world");
-    }
+
+
 
 }
